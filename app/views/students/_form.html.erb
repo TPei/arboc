@@ -12,30 +12,65 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :first_name %><br>
-    <%= f.text_field :first_name %>
+    <div class="ui labeled input">
+      <div class="ui label">
+        <%= f.label :first_name %>
+      </div>
+        <%= f.text_field :first_name %>
+    </div>
   </div>
   <div class="field">
-    <%= f.label :last_name %><br>
-    <%= f.text_field :last_name %>
+    <div class="ui labeled input">
+      <div class="ui label">
+        <%= f.label :last_name %>
+      </div>
+      <%= f.text_field :last_name %>
+    </div>
   </div>
   <div class="field">
-    <%= f.label :salutation %><br>
-    <%= f.text_field :salutation %>
+    <div class="ui labeled input">
+      <div class="ui label">
+        <%= f.label :salutation %>
+      </div>
+      <%= f.text_field :salutation %>
+    </div>
   </div>
   <div class="field">
-    <%= f.label :class_level %><br>
-    <%= f.number_field :class_level %>
+    <div class="ui labeled input">
+      <div class="ui label">
+        <%= f.label :class_level %>
+      </div>
+      <%= f.text_field :class_level %>
+    </div>
   </div>
   <div class="field">
-    <%= f.label :class_name %><br>
-    <%= f.text_field :class_name %>
+    <div class="ui labeled input">
+      <div class="ui label">
+        <%= f.label :class_name %>
+      </div>
+      <%= f.text_field :class_name %>
+    </div>
   </div>
   <div class="field">
-    <%= f.label :school_id %><br>
-    <%= f.collection_select :school, School.all, :id, :name %>
+    <div class="ui selection dropdown">
+      <input type="hidden" name="gender">
+      <i class="dropdown icon"></i>
+      <div class="default text"><%= f.label :school_id %></div>
+      <div class="menu">
+        <%= School.all.each do |school| %>
+            <div class="item" data-value="1"><%= school.name %></div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="ui labeled input">
+      <div class="ui label">
+        <%= f.label :school_id %>
+      </div>
+      <%= f.collection_select :school, School.all, :id, :name , class: 'item'%>
+    </div>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Save', :class => 'ui primary button'%>
   </div>
 <% end %>

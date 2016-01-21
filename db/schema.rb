@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160120170440) do
+ActiveRecord::Schema.define(version: 20160121113017) do
 
   create_table "schools", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -20,14 +20,16 @@ ActiveRecord::Schema.define(version: 20160120170440) do
   end
 
   create_table "students", force: :cascade do |t|
-    t.string   "first_name",  limit: 255
-    t.string   "last_name",   limit: 255
-    t.string   "salutation",  limit: 255
-    t.integer  "class_level", limit: 4
-    t.string   "class_name",  limit: 255
-    t.integer  "school_id",   limit: 4
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.string   "first_name",           limit: 255
+    t.string   "last_name",            limit: 255
+    t.string   "salutation",           limit: 255
+    t.integer  "class_level",          limit: 4
+    t.string   "class_name",           limit: 255
+    t.integer  "school_id",            limit: 4
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.boolean  "counseled",            limit: 1
+    t.boolean  "voluntary_internship", limit: 1
   end
 
   add_index "students", ["school_id"], name: "index_students_on_school_id", using: :btree

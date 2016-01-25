@@ -57,7 +57,7 @@ de:
       show_in_app:
         menu: "Anzeigen in App"
       new:
-        title: "Hinzufügen %{model_label}"
+        title: "%{model_label} hinzufügen"
         menu: "Neu hinzufügen"
         breadcrumb: "Hinzufügen"
         link: "%{model_label} hinzufügen"
@@ -83,8 +83,8 @@ de:
         title: "%{model_label_plural} exportieren"
         menu: "Exportieren"
         breadcrumb: "Exportieren"
-        link: "Export gefunden %{model_label_plural}"
-        bulk_link: "Export ausgewählt %{model_label_plural}"
+        link: "Exportiere gefundene %{model_label_plural}"
+        bulk_link: "Exportiere ausgewählte %{model_label_plural}"
         done: "exportiert"
       history_index:
         title: "Historie von %{model_label_plural}"
@@ -103,7 +103,7 @@ de:
       char_length_up_to: "Länge bis zu"
       char_length_of: "Länge von"
       save: "Speichern"
-      save_and_add_another: "Speichern und einen weiteren hinzufügen"
+      save_and_add_another: "Speichern und weiteren Eintrag anlegen"
       save_and_edit: "Speichern und bearbeiten"
       all_of_the_following_related_items_will_be_deleted: "? Alle der folgenden, zugehörigen Positionen werden gelöscht:"
       are_you_sure_you_want_to_delete_the_object: "Wollen Sie %{model_name} wirklich löschen"

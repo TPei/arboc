@@ -42,3 +42,15 @@ module RailsAdmin
     UTF8_ENCODINGS = [nil, '', 'utf8', 'utf-8', 'unicode', 'UTF8', 'UTF-8', 'UNICODE', 'utf8mb4', 'latin1']
   end
 end
+
+module AdminUserLocale extend ActiveSupport::Concern
+  included do
+    before_filter :set_locale
+  end
+
+  def set_locale
+    I18n.locale = :de
+  end
+end
+
+RailsAdmin::ApplicationController.send :include, AdminUserLocale

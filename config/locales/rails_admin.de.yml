@@ -34,7 +34,7 @@ de:
       object_not_found: "%{model} mit Id '%{id}' wurde nicht gefunden"
     table_headers:
       model_name: "Modellname"
-      last_used: "zuletzt benutzt"
+      last_used: "zuletzt bearbeitet"
       records: "Datensatz"
       username: "Nutzer"
       changes: "Änderungen"
@@ -43,7 +43,7 @@ de:
       message: "Meldung"
     actions:
       dashboard:
-        title: "Administration"
+        title: "Verwaltung"
         menu: "Übersicht"
         breadcrumb: "Übersicht"
       index:
@@ -105,8 +105,8 @@ de:
       save: "Speichern"
       save_and_add_another: "Speichern und weiteren Eintrag anlegen"
       save_and_edit: "Speichern und bearbeiten"
-      all_of_the_following_related_items_will_be_deleted: "? Alle der folgenden, zugehörigen Positionen werden gelöscht:"
-      are_you_sure_you_want_to_delete_the_object: "Wollen Sie %{model_name} wirklich löschen"
+      all_of_the_following_related_items_will_be_deleted: "? Alle der folgenden, zugehörigen Datensätze werden gelöscht:"
+      are_you_sure_you_want_to_delete_the_object: "Wollen Sie diese/n %{model_name} wirklich löschen"
       confirmation: "Ja, ich bin sicher"
       bulk_delete: "Die folgenden Objekte werden gelöscht:"
       new_model: "%{name} (neu)"

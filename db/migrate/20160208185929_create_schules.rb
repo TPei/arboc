@@ -1,6 +1,6 @@
-class CreateSchools < ActiveRecord::Migration
+class CreateSchules < ActiveRecord::Migration
   def change
-    create_table :schools do |t|
+    create_table :schules do |t|
       t.string :name
 
       t.timestamps null: false

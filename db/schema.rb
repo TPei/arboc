@@ -11,10 +11,50 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160121113017) do
+ActiveRecord::Schema.define(version: 20160208195453) do
+
+  create_table "geschlechts", force: :cascade do |t|
+    t.string   "titel",      limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "schools", force: :cascade do |t|
     t.string   "name",       limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "schuelers", force: :cascade do |t|
+    t.string   "vorname",                            limit: 255
+    t.string   "nachname",                           limit: 255
+    t.integer  "geschlecht_id",                      limit: 4
+    t.integer  "klassenstufe",                       limit: 4
+    t.string   "klassenname",                        limit: 255
+    t.integer  "schule_id",                          limit: 4
+    t.integer  "verbleib_id",                        limit: 4
+    t.datetime "created_at",                                     null: false
+    t.datetime "updated_at",                                     null: false
+    t.boolean  "wurde_beraten",                      limit: 1
+    t.boolean  "freiwilliges_praktikum_abgeleistet", limit: 1
+    t.integer  "schuljahr_id",                       limit: 4
+  end
+
+  add_index "schuelers", ["geschlecht_id"], name: "index_schuelers_on_geschlecht_id", using: :btree
+  add_index "schuelers", ["schule_id"], name: "index_schuelers_on_schule_id", using: :btree
+  add_index "schuelers", ["schuljahr_id"], name: "index_schuelers_on_schuljahr_id", using: :btree
+  add_index "schuelers", ["verbleib_id"], name: "index_schuelers_on_verbleib_id", using: :btree
+
+  create_table "schules", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.string   "Kuerzel",    limit: 255
+  end
+
+  create_table "schuljahrs", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.string   "kuerzel",    limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
@@ -34,5 +74,15 @@ ActiveRecord::Schema.define(version: 20160121113017) do
 
   add_index "students", ["school_id"], name: "index_students_on_school_id", using: :btree
 
+  create_table "verbleibs", force: :cascade do |t|
+    t.string   "titel",      limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  add_foreign_key "schuelers", "geschlechts"
+  add_foreign_key "schuelers", "schules"
+  add_foreign_key "schuelers", "schuljahrs"
+  add_foreign_key "schuelers", "verbleibs"
   add_foreign_key "students", "schools"
 end

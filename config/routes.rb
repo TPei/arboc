@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :schuelers
+
   mount RailsAdmin::Engine => '/schueler', as: 'rails_admin'
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,0 +1,45 @@
+<%= form_for(@schueler) do |f| %>
+  <% if @schueler.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@schueler.errors.count, "error") %> prohibited this schueler from being saved:</h2>
+
+      <ul>
+      <% @schueler.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :vorname %><br>
+    <%= f.text_field :vorname %>
+  </div>
+  <div class="field">
+    <%= f.label :nachname %><br>
+    <%= f.text_field :nachname %>
+  </div>
+  <div class="field">
+    <%= f.label :geschlecht_id %><br>
+    <%= f.text_field :geschlecht_id %>
+  </div>
+  <div class="field">
+    <%= f.label :klassenstufe %><br>
+    <%= f.number_field :klassenstufe %>
+  </div>
+  <div class="field">
+    <%= f.label :klassenname %><br>
+    <%= f.text_field :klassenname %>
+  </div>
+  <div class="field">
+    <%= f.label :schule_id %><br>
+    <%= f.text_field :schule_id %>
+  </div>
+  <div class="field">
+    <%= f.label :verbleib_id %><br>
+    <%= f.text_field :verbleib_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

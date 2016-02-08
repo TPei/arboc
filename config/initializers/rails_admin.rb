@@ -34,6 +34,51 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+  config.model 'Schueler' do
+    label 'Schüler'
+    label_plural 'Schüler'
+
+    list do
+      include_all_fields
+      field :schule do
+        label 'Schule'
+        searchable :name
+        searchable :kuerzel
+      end
+
+      field :schuljahr do
+        label 'Schuljahr'
+        searchable :name
+        searchable :kuerzel
+      end
+    end
+
+    show do
+      include_all_fields
+    end
+
+  end
+
+  config.model 'Schule' do
+    label 'Schule'
+    label_plural 'Schulen'
+  end
+
+  config.model 'Geschlecht' do
+    label 'Geschlecht'
+    label_plural 'Geschlechter'
+  end
+
+  config.model 'Verbleib' do
+    label 'Verbleib'
+    label_plural 'Verbleibe'
+  end
+
+  config.model 'Schuljahr' do
+    label 'Schuljahr'
+    label_plural 'Schuljahre'
+  end
 end
 
 module RailsAdmin

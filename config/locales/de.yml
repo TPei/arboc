@@ -1,0 +1,6 @@
+de:
+  activerecord:
+    models:
+      Schueler:
+        one: Schüler
+        other: Schüler

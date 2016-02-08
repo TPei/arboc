@@ -5,4 +5,8 @@ class Schueler < ActiveRecord::Base
   belongs_to :schuljahr
 
   validates_presence_of :schule, :klassenstufe, :vorname, :nachname, :schuljahr
+
+  def name
+    "#{vorname} #{nachname}"
+  end
 end

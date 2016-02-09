@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :schuelers
 
   mount RailsAdmin::Engine => '/', as: 'rails_admin'

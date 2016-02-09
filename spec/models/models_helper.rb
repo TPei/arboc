@@ -1,0 +1,6 @@
+require 'active_record'
+require './app/models/geschlecht'
+require './app/models/schueler'
+require './app/models/schule'
+require './app/models/schuljahr'
+require './app/models/verbleib'

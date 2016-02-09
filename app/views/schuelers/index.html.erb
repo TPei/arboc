@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Schuelers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Vorname</th>
+      <th>Nachname</th>
+      <th>Geschlecht</th>
+      <th>Klassenstufe</th>
+      <th>Klassenname</th>
+      <th>Schule</th>
+      <th>Verbleib</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @schuelers.each do |schueler| %>
+      <tr>
+        <td><%= schueler.vorname %></td>
+        <td><%= schueler.nachname %></td>
+        <td><%= schueler.geschlecht %></td>
+        <td><%= schueler.klassenstufe %></td>
+        <td><%= schueler.klassenname %></td>
+        <td><%= schueler.schule %></td>
+        <td><%= schueler.verbleib %></td>
+        <td><%= link_to 'Show', schueler %></td>
+        <td><%= link_to 'Edit', edit_schueler_path(schueler) %></td>
+        <td><%= link_to 'Destroy', schueler, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Schueler', new_schueler_path %>

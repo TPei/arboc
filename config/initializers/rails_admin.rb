@@ -34,6 +34,105 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+  config.model 'Schueler' do
+    label 'Schüler'
+    label_plural 'Schüler'
+
+    list do
+      include_all_fields
+      field :schule do
+        label 'Schule'
+        searchable :name
+        searchable :kuerzel
+      end
+
+      field :schuljahr do
+        label 'Schuljahr'
+        searchable :name
+        searchable :kuerzel
+      end
+
+      exclude_fields :id, :created_at, :updated_at
+    end
+
+    show do
+      include_all_fields
+      exclude_fields :id, :created_at, :updated_at
+    end
+
+    export do 
+      exclude_fields :id, :created_at, :updated_at
+    end
+  end
+
+  config.model 'Schule' do
+    label 'Schule'
+    label_plural 'Schulen'
+
+    list do
+      exclude_fields :id, :created_at, :updated_at
+    end
+    
+    show do
+      exclude_fields :id, :created_at, :updated_at
+    end
+
+    export do 
+      exclude_fields :id, :created_at, :updated_at
+    end
+  end
+
+  config.model 'Geschlecht' do
+    label 'Geschlecht'
+    label_plural 'Geschlechter'
+    
+    list do
+      exclude_fields :id, :created_at, :updated_at
+    end
+    
+    show do
+      exclude_fields :id, :created_at, :updated_at
+    end
+
+    export do 
+      exclude_fields :id, :created_at, :updated_at
+    end
+  end
+
+  config.model 'Verbleib' do
+    label 'Verbleib'
+    label_plural 'Verbleibe'
+
+    list do
+      exclude_fields :id, :created_at, :updated_at
+    end
+    
+    show do
+      exclude_fields :id, :created_at, :updated_at
+    end
+
+    export do 
+      exclude_fields :id, :created_at, :updated_at
+    end
+  end
+
+  config.model 'Schuljahr' do
+    label 'Schuljahr'
+    label_plural 'Schuljahre'
+
+    list do
+      exclude_fields :id, :created_at, :updated_at
+    end
+    
+    show do
+      exclude_fields :id, :created_at, :updated_at
+    end
+
+    export do 
+      exclude_fields :id, :created_at, :updated_at
+    end
+  end
 end
 
 module RailsAdmin

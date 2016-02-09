@@ -38,6 +38,7 @@ RailsAdmin.config do |config|
   config.model 'Schueler' do
     label 'Schüler'
     label_plural 'Schüler'
+    navigation_icon 'fa fa-users'
 
     list do
       include_all_fields
@@ -69,6 +70,7 @@ RailsAdmin.config do |config|
   config.model 'Schule' do
     label 'Schule'
     label_plural 'Schulen'
+    navigation_icon 'fa fa-university'
 
     list do
       exclude_fields :id, :created_at, :updated_at
@@ -86,6 +88,7 @@ RailsAdmin.config do |config|
   config.model 'Geschlecht' do
     label 'Geschlecht'
     label_plural 'Geschlechter'
+    navigation_icon 'fa fa-female'
     
     list do
       exclude_fields :id, :created_at, :updated_at
@@ -103,6 +106,7 @@ RailsAdmin.config do |config|
   config.model 'Verbleib' do
     label 'Verbleib'
     label_plural 'Verbleibe'
+    navigation_icon 'fa fa-graduation-cap'
 
     list do
       exclude_fields :id, :created_at, :updated_at
@@ -120,6 +124,7 @@ RailsAdmin.config do |config|
   config.model 'Schuljahr' do
     label 'Schuljahr'
     label_plural 'Schuljahre'
+    navigation_icon 'fa fa-calendar'
 
     list do
       exclude_fields :id, :created_at, :updated_at
@@ -132,6 +137,10 @@ RailsAdmin.config do |config|
     export do 
       exclude_fields :id, :created_at, :updated_at
     end
+  end
+
+  config.model 'User' do
+    navigation_icon 'fa fa-cogs'
   end
 end
 

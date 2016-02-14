@@ -35,6 +35,23 @@ RailsAdmin.config do |config|
     # history_show
   end
 
+  config.model 'BerufsWunsch' do
+    label 'Berufswunsch'
+    label_plural 'Berufswuensche'
+    navigation_icon 'fa fa-pie-chart'
+
+    exclude_fields :id, :created_at, :updated_at, :schueler
+
+    show do
+      include_all_fields
+      exclude_fields :id, :created_at, :updated_at, :schueler
+    end
+
+    export do 
+      exclude_fields :id, :created_at, :updated_at, :schueler
+    end
+  end
+
   config.model 'Schueler' do
     label 'Schüler'
     label_plural 'Schüler'

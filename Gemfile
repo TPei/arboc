@@ -27,6 +27,7 @@ gem 'rails_admin'
 gem 'devise'
 gem 'cancancan'
 gem "font-awesome-rails"
+gem 'rollbar', '~> 2.7.1'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -50,6 +51,4 @@ end
 
 group :production do
   gem 'pg'
-  gem 'rollbar', '~> 2.7.1'
 end 
-

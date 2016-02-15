@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160209135831) do
+ActiveRecord::Schema.define(version: 20160215154130) do
+
+  create_table "berufs_wunsches", force: :cascade do |t|
+    t.string   "name",        limit: 255
+    t.string   "description", limit: 255
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
+
+  create_table "berufs_wunsches_schuelers", id: false, force: :cascade do |t|
+    t.integer "berufs_wunsch_id", limit: 4
+    t.integer "schueler_id",      limit: 4
+  end
 
   create_table "geschlechts", force: :cascade do |t|
     t.string   "titel",      limit: 255
@@ -49,7 +61,7 @@ ActiveRecord::Schema.define(version: 20160209135831) do
     t.string   "name",       limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
-    t.string   "Kuerzel",    limit: 255
+    t.string   "kuerzel",    limit: 255
   end
 
   create_table "schuljahrs", force: :cascade do |t|

@@ -31,7 +31,7 @@ class Ability
     if user
       can :access, :rails_admin
       can :dashboard
-      can :manage, [Schueler, Geschlecht, Schule, Schuljahr, Verbleib]
+      can :manage, [Schueler, Geschlecht, Schule, Schuljahr, Verbleib, BerufsWunsch]
 
       if user && user.admin?
         can :manage, :all

@@ -50,5 +50,6 @@ end
 
 group :production do
   gem 'pg'
+  gem 'rollbar', '~> 2.7.1'
 end 
 

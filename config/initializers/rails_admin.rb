@@ -62,7 +62,7 @@ RailsAdmin.config do |config|
       field :schule do
         label 'Schule'
         searchable :name
-        searchable :Kuerzel
+        searchable :kuerzel
       end
 
       field :schuljahr do

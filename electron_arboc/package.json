@@ -1,27 +1,23 @@
 {
-  "name": "electron-quick-start",
+  "name": "arboc",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "native arboc with electron",
   "main": "main.js",
   "scripts": {
     "start": "electron main.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/atom/electron-quick-start.git"
+    "url": "git+https://github.com/TPei/arboc"
   },
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial"
+    "arboc",
+    "Arboc",
+    "casa-ev"
   ],
-  "author": "GitHub",
+  "author": "TPei",
   "license": "CC0-1.0",
-  "bugs": {
-    "url": "https://github.com/atom/electron-quick-start/issues"
-  },
-  "homepage": "https://github.com/atom/electron-quick-start#readme",
+  "homepage": "https://github.com/TPei/arboc",
   "devDependencies": {
     "electron-prebuilt": "^0.36.0"
   }

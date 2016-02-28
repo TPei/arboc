@@ -10,14 +10,13 @@
 #   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
 #
 default: &default
-  adapter: mysql2
+  adapter: postgresql
   encoding: utf8
   pool: 5
-  username: root
-  password: root
+  username: demouser
+  password: dummypassword
   host: localhost
-  port: 8889
-  socket: /Applications/MAMP/tmp/mysql/mysql.sock
+  port: 5432
 
 development:
   <<: *default
